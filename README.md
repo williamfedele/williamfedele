@@ -1,16 +1,20 @@
-## Hi there 👋
+```console
+> ./construct_initialize.sh --user="williamfedele"
+[SCANNING BIOMETRIC DATA]
+Identity confirmed: William Fedele
+Division: R&D // Software
+Initializing construct...
 
-<!--
-**williamfedele/williamfedele** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+ERROR: Instance already exists
+Aborting...
 
-Here are some ideas to get you started:
+> ps aux | grep soul
+USER       PID  %CPU %MEM    VSZ   RSS   TTY  STAT START        TIME COMMAND
+root       256  99.9  89.2     ∞     ∞    ??  Rs+    ---   847:32.14 /usr/local/bin/soul_construct
+will     13338   0.0   0.1 12940   724 pts/0  S+   13:13     0:00.01 grep --color=auto soul
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+> kill -9 256
+kill: (256): - Operation not permitted
+
+[Connection closed by remote host]
+```
